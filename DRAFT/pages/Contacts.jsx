@@ -1,10 +1,10 @@
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Container, Title, ContactsTitle, Error } from './App.styled';
+import { Container, Title, ContactsTitle, Error } from './Contacts.styled';
 import { ContactForm } from 'components/ContactForm/ContactForm';
 import { ContactList } from 'components/ContactList/ContactList';
 import { Filter } from 'components/Filter/Filter';
-import { Loader } from './Loader/Loader';
+import { Loader } from '../Loader/Loader';
 
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';

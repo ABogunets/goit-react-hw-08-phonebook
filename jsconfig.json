@@ -2,5 +2,11 @@
   "compilerOptions": {
     "baseUrl": "src"
   },
-  "include": ["src"]
+  "include": [, "DRAFT/pages/Contacts.jsx"
+    "src",
+    "DRAFT/redux/contacts",
+    "DRAFT/Loader",
+    "DRAFT/Contact",
+    "DRAFT/ContactForm"
+  ]
 }

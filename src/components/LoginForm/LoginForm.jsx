@@ -2,14 +2,13 @@ import { useState } from 'react';
 import { nanoid } from 'nanoid';
 import { FormWrapper, Label, Input, SubmitBtn } from './LoginForm.styled';
 
-// import { useDispatch } from 'react-redux';
-// import { addContact } from 'redux/operations';
+import { useDispatch } from 'react-redux';
+import { authOperations } from 'redux/auth/auth-operations';
 
 export const LoginForm = () => {
   // ----controlled form
   const emailInputId = nanoid();
   const passwordInputId = nanoid();
-  // const dispatch = useDispatch();
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -29,9 +28,10 @@ export const LoginForm = () => {
   };
   // ----
   // ----form submit
+  const dispatch = useDispatch();
   const handleSubmit = e => {
     e.preventDefault();
-    //  dispatch(authOperations.register({ name, email, password }));
+    dispatch(authOperations.logIn({ email, password }));
 
     reset();
   };
@@ -66,7 +66,7 @@ export const LoginForm = () => {
         value={password}
         onChange={handleChange}
       />
-      <SubmitBtn type="submit">Register</SubmitBtn>
+      <SubmitBtn type="submit">Log In</SubmitBtn>
     </FormWrapper>
   );
 };

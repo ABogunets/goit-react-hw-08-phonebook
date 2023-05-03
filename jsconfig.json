@@ -4,9 +4,9 @@
   },
   "include": [
     "src",
-    "DRAFT/redux/contacts",
+    "src/redux/contacts",
     "DRAFT/Loader",
-    "DRAFT/Contact",
+    "src/components/Contact",
     "DRAFT/ContactForm"
   ]
 }

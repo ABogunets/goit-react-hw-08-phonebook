@@ -6,9 +6,9 @@ import {
 } from 'components/Filter/Filter.styled';
 
 import { useDispatch } from 'react-redux';
-import { changeFilter } from 'redux/filterSlice';
+import { changeFilter } from 'redux/contacts/filter-slice';
 import { useSelector } from 'react-redux';
-import { selectFilter } from 'redux/selectors';
+import { selectFilter } from 'redux/contacts/contacts-selectors';
 
 export const Filter = () => {
   const filterInputId = nanoid();

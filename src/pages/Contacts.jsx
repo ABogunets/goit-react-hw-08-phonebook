@@ -4,14 +4,18 @@ import { Container, Title, ContactsTitle, Error } from './Contacts.styled';
 import { ContactForm } from 'components/ContactForm/ContactForm';
 import { ContactList } from 'components/ContactList/ContactList';
 import { Filter } from 'components/Filter/Filter';
-import { Loader } from '../Loader/Loader';
+import { Loader } from 'components/Loader/Loader';
 
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchContacts } from 'redux/operations';
-import { selectContacts, selectError, selectIsLoading } from 'redux/selectors';
+import { fetchContacts } from 'redux/contacts/contacts-operations';
+import {
+  selectContacts,
+  selectError,
+  selectIsLoading,
+} from 'redux/contacts/contacts-selectors';
 
-export const App = () => {
+const Contacts = () => {
   const dispatch = useDispatch();
   const contactItems = useSelector(selectContacts);
   const isLoading = useSelector(selectIsLoading);
@@ -39,3 +43,5 @@ export const App = () => {
     </Container>
   );
 };
+
+export default Contacts;

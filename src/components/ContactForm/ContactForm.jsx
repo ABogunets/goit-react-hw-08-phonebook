@@ -10,8 +10,8 @@ import {
 } from 'components/ContactForm/ContactForm.styled';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { addContact } from 'redux/operations';
-import { selectContacts } from 'redux/selectors';
+import { addContact } from 'redux/contacts/contacts-operations';
+import { selectContacts } from 'redux/contacts/contacts-selectors';
 import { checkName } from 'service-functions';
 
 export const ContactForm = () => {
@@ -43,7 +43,7 @@ export const ContactForm = () => {
     e.preventDefault();
     const contact = {
       name: e.target.elements.name.value,
-      phone: e.target.elements.number.value,
+      number: e.target.elements.number.value,
     };
     if (!checkName(name, contactItems)) {
       dispatch(addContact(contact));

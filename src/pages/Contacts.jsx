@@ -1,6 +1,12 @@
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Container, Title, ContactsTitle, Error } from './Contacts.styled';
+import {
+  Container,
+  Title,
+  ContactsTitle,
+  Error,
+  Text,
+} from './Contacts.styled';
 import { ContactForm } from 'components/ContactForm/ContactForm';
 import { ContactList } from 'components/ContactList/ContactList';
 import { Filter } from 'components/Filter/Filter';
@@ -47,9 +53,10 @@ const Contacts = () => {
       {contactItems.length > 0 ? (
         <ContactList />
       ) : (
-        <p>
-          There are no entries in the phonebook yet. Please add a new contact.
-        </p>
+        <Text>
+          There are no entries in the phonebook yet. <br />
+          Please add a new contact.
+        </Text>
       )}
       {error && <Error>Oops, sorry, something went wrong...</Error>}
       <ToastContainer autoClose={3000} />

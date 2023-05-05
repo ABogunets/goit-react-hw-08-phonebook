@@ -22,6 +22,13 @@ export const Title = styled.h1`
   align-items: center;
 `;
 
+export const Text = styled.p`
+  /* font-size: 34px; */
+  color: steelblue;
+  padding: 5px 0px;
+  font-style: italic;
+`;
+
 export const Error = styled.h4`
   margin-top: 10px;
   margin-bottom: 10px;

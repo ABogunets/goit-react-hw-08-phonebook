@@ -48,8 +48,6 @@ export const LoginForm = () => {
       <Input
         type="email"
         name="email"
-        // pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-        // title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
         required
         id={emailInputId}
         value={email}
@@ -59,8 +57,6 @@ export const LoginForm = () => {
       <Input
         type="password"
         name="password"
-        // pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-        // title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
         required
         id={passwordInputId}
         value={password}

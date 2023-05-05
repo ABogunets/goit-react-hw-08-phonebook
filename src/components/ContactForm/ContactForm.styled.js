@@ -37,14 +37,16 @@ export const NumberInput = styled.input`
 `;
 
 export const SubmitBtn = styled.button`
-  margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
   border: none;
-  padding: 5px 20px;
-  border-radius: 5px;
+  padding: 5px 10px;
+  border-radius: 2px;
   color: white;
   background-color: SteelBlue;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
   &:active {
     background-color: DeepSkyBlue;
   }

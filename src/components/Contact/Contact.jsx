@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { ContactData, BtnDelete } from 'components/Contact/Contact.styled';
+import { RiDeleteBack2Fill } from 'react-icons/ri';
 
 import { useDispatch } from 'react-redux';
 import { deleteContact } from 'redux/contacts/contacts-operations';
@@ -15,7 +16,11 @@ export const Contact = ({ contact }) => {
       <ContactData>
         {name}: {number}
       </ContactData>
-      <BtnDelete onClick={onDeleteContact}>Delete</BtnDelete>
+      <BtnDelete onClick={onDeleteContact}>
+        <RiDeleteBack2Fill
+          style={{ width: 20, height: 20, color: 'steelblue' }}
+        />
+      </BtnDelete>
     </>
   );
 };

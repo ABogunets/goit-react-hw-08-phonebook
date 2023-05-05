@@ -5,6 +5,7 @@ import { ContactForm } from 'components/ContactForm/ContactForm';
 import { ContactList } from 'components/ContactList/ContactList';
 import { Filter } from 'components/Filter/Filter';
 import { Loader } from 'components/Loader/Loader';
+import { MdContactPhone } from 'react-icons/md';
 
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -27,7 +28,17 @@ const Contacts = () => {
 
   return (
     <Container>
-      <Title>Phonebook</Title>
+      <Title>
+        PhoneBook
+        <MdContactPhone
+          style={{
+            width: 40,
+            height: 40,
+            color: 'steelblue',
+            marginLeft: 5,
+          }}
+        />
+      </Title>
       <ContactForm />
       <Filter />
       <ContactsTitle>Contacts</ContactsTitle>
@@ -36,7 +47,9 @@ const Contacts = () => {
       {contactItems.length > 0 ? (
         <ContactList />
       ) : (
-        <p>There are no entries in the phonebook yet</p>
+        <p>
+          There are no entries in the phonebook yet. Please add a new contact.
+        </p>
       )}
       {error && <Error>Oops, sorry, something went wrong...</Error>}
       <ToastContainer autoClose={3000} />

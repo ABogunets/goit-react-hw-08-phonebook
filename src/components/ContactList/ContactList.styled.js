@@ -4,7 +4,7 @@ export const ContactsWrapper = styled.div`
   border: 1px solid Steelblue;
   border-radius: 5px;
   padding: 5px 5px;
-  margin-top: 10px;
+  margin-top: 5px;
 `;
 
 export const ContactsList = styled.ul`

@@ -8,15 +8,18 @@ export const Container = styled.div`
   background-color: PowderBlue;
 `;
 
-export const Title = styled.h1`
+export const ContactsTitle = styled.h2`
   color: steelblue;
   padding: 5px 0px;
-  font-size: 34px;
 `;
 
-export const ContactsTitle = styled.h1`
+export const Title = styled.h1`
+  font-size: 34px;
   color: steelblue;
   padding: 5px 0px;
+
+  display: inline-flex;
+  align-items: center;
 `;
 
 export const Error = styled.h4`

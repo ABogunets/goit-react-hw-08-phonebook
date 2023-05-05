@@ -70,7 +70,7 @@ export const ContactForm = () => {
         id={nameInputId}
         onChange={handleChange}
       />
-      <NumberLabel htmlFor={numberInputId}>Number</NumberLabel>
+      <NumberLabel htmlFor={numberInputId}>Phone Number</NumberLabel>
       <NumberInput
         type="tel"
         name="number"

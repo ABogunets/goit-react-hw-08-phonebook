@@ -10,7 +10,12 @@ export const FilterWrapper = styled.div`
 `;
 export const FilterLabel = styled.label`
   padding: 5px 5px;
-  color: Navy;
+  /* color: Navy; */
+  color: steelblue;
+  font-size: 20px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
 `;
 
 export const FilterInput = styled.input`

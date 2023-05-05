@@ -1,4 +1,5 @@
 import { nanoid } from 'nanoid';
+import { ImSearch } from 'react-icons/im';
 import {
   FilterWrapper,
   FilterLabel,
@@ -22,7 +23,12 @@ export const Filter = () => {
 
   return (
     <FilterWrapper>
-      <FilterLabel htmlFor={filterInputId}>Find contacts by name</FilterLabel>
+      <FilterLabel htmlFor={filterInputId}>
+        <ImSearch
+          style={{ width: 20, height: 20, color: 'steelblue', marginRight: 10 }}
+        />
+        Find contacts by name
+      </FilterLabel>
       <FilterInput
         type="text"
         id={filterInputId}
